@@ -11,7 +11,7 @@ const config = {
     appId: process.env.REACT_APP_appId
 }
 
-export const createUseProfileDocument = async (userAuth, additionalData) => {
+export const createUserProfileDocument = async (userAuth, additionalData) => {
 
     if(!userAuth) return
     
