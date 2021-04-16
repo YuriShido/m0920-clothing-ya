@@ -10,3 +10,8 @@ export const addItem = (item) => ({
 export const toggleCartHidden = () => ({
     type: TOGGLE_CART_HIDDEN
 })
+
+// export const addCartItemQuantity = () => ({
+//     type: ADD_CART_QUANTITY
+//     payload: item
+// })
