@@ -6,8 +6,9 @@ import './cart-dropdown.styles.scss'
 import CartItem from '../cart-item/cart-item.component'
 import CustomButton from '../custom-button/custom-button.component'
 import { CartDropdownContainer, CartDropdownButton } from './cart-dropdown.styles'
+import {} from '../../redux/cart/cart.action'
 
-const CartDropdown = ({ cartItemProps }) => {
+const CartDropdown = ({ cartItemProps, history, dispatch }) => {
   return (
     <CartDropdownContainer>
       <div className='cart-items'>
@@ -19,7 +20,12 @@ const CartDropdown = ({ cartItemProps }) => {
           <span className='empty-message'>Your cart is empty</span>
         )}
       </div>
-      <CartDropdownButton>GO TO CHECKOUT</CartDropdownButton>
+      <CartDropdownButton
+        onClick={() => {
+          history.push('/checkout')
+          dispatch()
+        }}
+      >GO TO CHECKOUT</CartDropdownButton>
     </CartDropdownContainer>
   )
 }
